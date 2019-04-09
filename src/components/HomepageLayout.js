@@ -36,10 +36,10 @@ const HomepageHeading = ({ mobile }) => (
       content='Deivis Dervinis'
       inverted
       style={{
-        fontSize: mobile ? '2em' : '4em',
+        fontSize: mobile ? '4em' : '5em',
         fontWeight: 'normal',
         marginBottom: 0,
-        marginTop: mobile ? '1.5em' : '3em',
+        marginTop: mobile ? '2.5em' : '3em',
       }}
     />
     <Header
@@ -47,12 +47,15 @@ const HomepageHeading = ({ mobile }) => (
       content='Portfolio'
       inverted
       style={{
-        fontSize: mobile ? '2.5em' : '2.7em',
+        fontSize: mobile ? '4.5em' : '4.7em',
         fontWeight: 'normal',
         marginTop: mobile ? '0.1em' : '0.7em',
       }}
     />
-    <Button primary size='huge'>
+    <Button primary size='huge'
+    style={{
+        
+    }}>
       Get Started 
       <br />
       <Icon name='down arrow' />
@@ -156,7 +159,7 @@ class MobileContainer extends Component {
           <Segment
             inverted
             textAlign='center'
-            style={{ minHeight: 350, padding: '1em 0em' }}
+            style={{ minHeight: '100vh', padding: '1em 0em' }}
             vertical
           >
             <Container>
@@ -196,24 +199,36 @@ const HomepageLayout = () => (
     <Segment style={{ padding: '8em 0em' }} vertical>
       <Grid container stackable verticalAlign='middle'>
         <Grid.Row>
-          <Grid.Column width={8}>
-            <Header as='h3' style={{ fontSize: '2em' }}>
-              We Help Companies and Companions
+          <Grid.Column textAlign='center'>
+            <Header as='h1' 
+                    style={{fontSize: '3em'}}>
+              About Me
             </Header>
-            <p style={{ fontSize: '1.33em' }}>
-              We can give your company superpowers to do things that they never thought possible.
-              Let us delight your customers and empower your needs... through pure data analytics.
-            </p>
-            <Header as='h3' style={{ fontSize: '2em' }}>
-              We Make Bananas That Can Dance
+
+            <p style={{ fontSize: '1.33em' }}> Hi! <br/> <br/>
+            I’m Deivis! I’m a third year Computer Science student at Sheridan College.
+            I am passionate about developing software, particularly in mobile and web.
+            <br/><br/>
+            Some of the projects I've worked on include:</p>
+
+            <Header as='h2' style={{ fontSize: '1.22em' }}>
+            Squid Impact: A Space Invaders Game Clone, Written In Java.
+            User Interface Implemented With Javax and Custom Sprites Designed
+            In Photoshop.
             </Header>
-            <p style={{ fontSize: '1.33em' }}>
-              Yes that's right, you thought it was the stuff of dreams, but even bananas can be
-              bioengineered.
-            </p>
-          </Grid.Column>
-          <Grid.Column floated='right' width={6}>
-            <Image bordered rounded size='large' src='/images/wireframe/white-image.png' />
+
+            <li>App has 5 levels of difficulty, ability to remember scores and player information</li>
+            <li>Implemented projectile, velocity, and motion algorithms</li>
+            <li>Used pseudorandom generators to display enemies and other obstacles</li>
+            <li>Designed an extensible object-oriented architecture to represent Players, Enemies, Sprites, and Projectiles</li>
+
+            <Header as='h2' style={{ fontSize: '1.22em' }}>
+              Count The Calories! A Hybrid Cross Platform App That Enables
+              Users To Track Their Weekly Grocery Purchases And Look up
+              Calorie Counts. Written With HTML5/CSS/JavasScript On The Cordova Platform.
+            </Header>
+
+            <li></li>
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>
@@ -228,50 +243,34 @@ const HomepageLayout = () => (
         <Grid.Row textAlign='center'>
           <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
             <Header as='h3' style={{ fontSize: '2em' }}>
-              "What a Company"
+              My Skills
             </Header>
-            <p style={{ fontSize: '1.33em' }}>That is what they all say about us</p>
+            <p style={{ fontSize: '1.33em' }}>
+            Placeholder</p>
           </Grid.Column>
           <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
             <Header as='h3' style={{ fontSize: '2em' }}>
-              "I shouldn't have gone with their competitor."
+              Download My CV
             </Header>
-            <p style={{ fontSize: '1.33em' }}>
-              <Image avatar src='/images/avatar/large/nan.jpg' />
-              <b>Nan</b> Chief Fun Officer Acme Toys
-            </p>
           </Grid.Column>
         </Grid.Row>
       </Grid>
     </Segment>
     <Segment style={{ padding: '8em 0em' }} vertical>
       <Container text>
-        <Header as='h3' style={{ fontSize: '2em' }}>
-          Breaking The Grid, Grabs Your Attention
-        </Header>
-        <p style={{ fontSize: '1.33em' }}>
-          Instead of focusing on content creation and hard work, we have learned how to master the
-          art of doing nothing by providing massive amounts of whitespace and generic content that
-          can seem massive, monolithic and worth your attention.
-        </p>
-        <Button as='a' size='large'>
-          Read More
-        </Button>
         <Divider
           as='h4'
           className='header'
           horizontal
           style={{ margin: '3em 0em', textTransform: 'uppercase' }}
         >
-          <a href='#'>Case Studies</a>
+          <a href='#'>Get In Touch</a>
         </Divider>
         <Header as='h3' style={{ fontSize: '2em' }}>
-          Did We Tell You About Our Bananas?
+          Placeholder
         </Header>
         <p style={{ fontSize: '1.33em' }}>
-          Yes I know you probably disregarded the earlier boasts as non-sequitur filler content, but
-          it's really true. It took years of gene splicing and combinatory DNA research, but our
-          bananas can really dance.
+        Placeholder
         </p>
         <Button as='a' size='large'>
           I'm Still Quite Interested
@@ -285,19 +284,10 @@ const HomepageLayout = () => (
             <Grid.Column width={3}>
               <Header inverted as='h4' content='About' />
               <List link inverted>
-                <List.Item as='a'>Sitemap</List.Item>
-                <List.Item as='a'>Contact Us</List.Item>
-                <List.Item as='a'>Religious Ceremonies</List.Item>
-                <List.Item as='a'>Gazebo Plans</List.Item>
-              </List>
-            </Grid.Column>
-            <Grid.Column width={3}>
-              <Header inverted as='h4' content='Services' />
-              <List link inverted>
-                <List.Item as='a'>Banana Pre-Order</List.Item>
-                <List.Item as='a'>DNA FAQ</List.Item>
-                <List.Item as='a'>How To Access</List.Item>
-                <List.Item as='a'>Favorite X-Men</List.Item>
+                <List.Item as='a'>Home</List.Item>
+                <List.Item as='a'>About</List.Item>
+                <List.Item as='a'>My Cv</List.Item>
+                <List.Item as='a'>Contact Me</List.Item>
               </List>
             </Grid.Column>
             <Grid.Column width={7}>
@@ -305,7 +295,7 @@ const HomepageLayout = () => (
                 Footer Header
               </Header>
               <p>
-                Extra space for a call to action inside the footer that could help re-engage users.
+                Placeholder
               </p>
             </Grid.Column>
           </Grid.Row>
