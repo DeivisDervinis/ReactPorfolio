@@ -30,7 +30,7 @@ const getWidth = () => {
  * such things.
  */
 const HomepageHeading = ({ mobile }) => (
-  <Container text>
+  <Container text style={{justifyContent: 'center'}}>
     <Header
       as='h1'
       content='Deivis Dervinis'
@@ -39,7 +39,7 @@ const HomepageHeading = ({ mobile }) => (
         fontSize: mobile ? '4em' : '5em',
         fontWeight: 'normal',
         marginBottom: 0,
-        marginTop: mobile ? '2.5em' : '3em',
+        marginTop: mobile? '1em' : '2em'
       }}
     />
     <Header
@@ -49,12 +49,12 @@ const HomepageHeading = ({ mobile }) => (
       style={{
         fontSize: mobile ? '4.5em' : '4.7em',
         fontWeight: 'normal',
-        marginTop: mobile ? '0.1em' : '0.7em',
+        marginTop: mobile ? '.1em' : '0.7em',
       }}
     />
     <Button primary size='huge'
     style={{
-        
+        marginTop: mobile? '3.5em' : '4em'
     }}>
       Get Started 
       <br />
@@ -87,7 +87,7 @@ class DesktopContainer extends Component {
           <Segment
             inverted
             textAlign='center'
-            style={{ minHeight:'100vh', padding: '1em 0em' }}
+            style={{ minHeight:'100vh', padding: '1em 0em',}}
             vertical
           >
             <Menu
@@ -160,7 +160,6 @@ class MobileContainer extends Component {
             inverted
             textAlign='center'
             style={{ minHeight: '100vh', padding: '1em 0em' }}
-            vertical
           >
             <Container>
               <Menu inverted pointing secondary size='large'>
